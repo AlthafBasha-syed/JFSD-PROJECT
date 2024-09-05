@@ -1,0 +1,53 @@
+package com.klef.jfsd.project.model;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table
+public class Student 
+{
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    @Column(name = "sname",length =30,nullable = false)
+    private String name;
+    @Column(name = "sgender",length =10,nullable = false)
+    private String gender;
+    @Column(name = "sdob",length =30,nullable = false)
+    private String dateofbirth;
+    @Column(name = "sdepartment",length =30,nullable = false)
+    private String department;
+    @Column(name = "semail",length =30,nullable = false)
+    private String email;
+    @Column(name = "scontact",length = 20,nullable = false,unique = true)
+    private String contact;
+    @Column(name = "susername",length =30,nullable = false)
+    private String username;
+    @Column(name = "spassword",length = 20,nullable = false,unique = true)
+    private String password;
+    @Column(name = "scourse1",nullable = false)
+    private String course1;
+    @Column(name = "scourse2")
+    private String course2;
+    @Column(name = "scourse3")
+    private String course3;
+    @Column(name = "sgrade1")
+    private int grade1;
+    @Column(name = "sgrade2")
+    private int grade2;
+    @Column(name = "sgrade3")
+    private int grade3;
+   
+    //@Column(name ="scgpa",precision = 4,scale =2,nullable = false)
+    //private double cgpa;
+	
+	
+	
+	
+	
+}

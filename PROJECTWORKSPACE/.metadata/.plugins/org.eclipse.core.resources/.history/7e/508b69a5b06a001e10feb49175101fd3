@@ -1,0 +1,16 @@
+package com.klef.jfsd.project.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.klef.jfsd.project.model.Faculty;
+import com.klef.jfsd.project.model.Student;
+
+@Repository
+public interface FacultyRepository extends JpaRepository<Faculty, Integer>
+{
+	@Query("select f from Faculty f where f.username=?1 and f.password=?2")
+	  public Faculty checkfacultylogin(String uname ,String pwd);
+	@Query("delete f from Faculty f where f.id=?")
+}

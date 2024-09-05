@@ -1,0 +1,11 @@
+package com.klef.jfsd.project.service;
+
+import com.klef.jfsd.project.model.Faculty;
+
+public interface FacultyService
+{
+	 public Faculty checkfacultylogin(String uname, String pwd);
+	 public void removef(int id);
+	 public Faculty viewfacultybyid(int id);
+	 public void Updatefaculty(Faculty f);
+}

@@ -1,0 +1,14 @@
+package com.klef.jfsd.project.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.klef.jfsd.project.model.Student;
+
+@Repository
+public interface StudentRepository extends JpaRepository<Student, Integer>
+{
+	 @Query("select a from Admin a where a.username=?1 and a.password=?2")
+	  public Student checkstudentlogin(String uname ,String pwd);
+}

@@ -1,0 +1,17 @@
+package com.klef.jfsd.project.service;
+
+import org.springframework.stereotype.Service;
+
+import com.klef.jfsd.project.model.Student;
+
+@Service
+public class StudentServiceImpl implements StudentService
+{
+
+	@Override
+	public Student checkstudentlogin(String uname, String pwd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

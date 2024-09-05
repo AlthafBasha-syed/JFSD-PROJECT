@@ -1,0 +1,25 @@
+package com.klef.jfsd.project.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.klef.jfsd.project.model.Student;
+import com.klef.jfsd.project.repository.StudentRepository;
+
+@Service
+public class StudentServiceImpl implements StudentService
+{
+
+	@Autowired
+	private StudentRepository studentRepository;
+	
+	
+	
+	@Override
+	public Student checkstudentlogin(String uname, String pwd)
+	{
+		
+		return studentRepository.checkadminlogin(uname, pwd);
+	}
+
+}

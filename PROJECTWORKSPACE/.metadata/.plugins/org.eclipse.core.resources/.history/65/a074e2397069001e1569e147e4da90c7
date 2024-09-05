@@ -1,0 +1,9 @@
+package com.klef.jfsd.project.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface AdminRepository extends JpaRepository<Admin, Integer>
+{
+	 @Query("select a from Admin a where a.username=?1 and a.password=?2")
+	  public Admi checkadminlogin(String uname ,String pwd);
+}

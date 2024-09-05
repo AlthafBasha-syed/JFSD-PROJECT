@@ -1,0 +1,6 @@
+package com.klef.jfsd.project.repository;
+
+public interface FacultyRepository 
+{
+
+}

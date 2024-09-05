@@ -1,0 +1,13 @@
+package com.klef.jfsd.project.service;
+
+
+
+public interface AdminService
+{
+
+  public Admin checkadminlogin(String uname, String pwd);
+  public String addcustomer(Customer c);
+  public long employeecount(); // count(*)
+  public long customercount(); // count(*)
+  public int updatestatus(int eid,boolean status); 
+}

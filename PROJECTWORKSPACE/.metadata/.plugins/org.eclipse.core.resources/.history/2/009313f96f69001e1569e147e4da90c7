@@ -1,0 +1,10 @@
+package com.klef.jfsd.project.service;
+
+
+
+public interface AdminService
+{
+
+  public Admin checkadminlogin(String uname, String pwd);
+ 
+}

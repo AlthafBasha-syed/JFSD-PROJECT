@@ -1,0 +1,7 @@
+package com.klef.jfsd.project.model;
+
+@E
+public class Admin 
+{
+
+}

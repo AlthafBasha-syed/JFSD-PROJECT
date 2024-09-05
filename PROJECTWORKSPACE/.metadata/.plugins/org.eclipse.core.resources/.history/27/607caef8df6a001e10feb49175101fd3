@@ -1,0 +1,67 @@
+package com.klef.jfsd.project.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.klef.jfsd.project.model.Faculty;
+import com.klef.jfsd.project.model.Student;
+import com.klef.jfsd.project.repository.FacultyRepository;
+import com.klef.jfsd.project.repository.StudentRepository;
+
+@Service
+public class FacultyServiceImpl implements FacultyService
+{
+
+	@Autowired
+	private FacultyRepository facultyRepository;
+	
+	@Autowired
+	private StudentRepository studentRepository;
+	
+	@Override
+	public Faculty checkfacultylogin(String uname, String pwd)
+	{
+		
+		return facultyRepository.checkfacultylogin(uname, pwd);
+	}
+
+	@Override
+	public void removef(int id)
+	{
+	   facultyRepository.removef(id);
+		
+	}
+
+	@Override
+	public Faculty viewfacultybyid(int id)
+	{  
+		Faculty f=(Faculty)facultyRepository.findById(id).get();
+		return f;
+	}
+
+	@Override
+	public void Updatefaculty(Faculty f)
+	{  
+		 Faculty f1=facultyRepository.findById(f.getId()).get();
+		 f.setPassword(f1.getPassword());
+		facultyRepository.save(f);
+				
+	}
+
+	@Override
+	public Student viewstudentbyid(int id)
+	{
+		
+		return (Student)studentRepository.findById(id).get();
+	}
+
+	@Override
+	public List<Student> viewallstudents() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+   
+}

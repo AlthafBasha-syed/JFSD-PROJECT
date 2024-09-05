@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<body>
+<jsp:include page="atop.jsp"></jsp:include>
+<jsp:include page="atop.jsp"></jsp:include>
+    <table class="colored-table">
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+        </tr>
+        <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+        </tr>
+        <!-- Add more rows as needed -->
+    </table>
+    <jsp:include page="abottom.jsp"></jsp:include>
+</body>
+</html>
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blogging</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="weblogo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="banner">
+        <img src="logo.png" alt="Your Logo" class="logo">
+        <ul class="navbar">
+            <li><a href="index" class="nav-link" data-target="home">Home</a></li>
+            <li><a href="features" class="nav-link" data-target="features">Features</a></li>
+
+            <li><a href="login" class="nav-link" data-target="login">Login</a></li>
+            <li><a href="register" class="nav-link" data-target="registration">Registration</a></li>
+            <li><a href="contactus" class="nav-link" data-target="Contact">Contact</a></li>
+            <li><a href="recentposts" class="nav-link" data-target="Recent posts">Recent posts</a></li>
+        </ul>
+        <div class="content">
+            <h1>Welcome to Your Blogging Website</h1>
+            <p>Share your thoughts, stories, and ideas with the world.</p>
+        </div>
+
+        <p id="registration-message" style="display: none; color: green;">Registration successful!</p>
+    </div>
+
+    <%
+        // JSP code for server-side processing
+        if (request.getMethod().equals("POST")) {
+            String fullName = request.getParameter("fullname");
+            String email = request.getParameter("email");
+            String username = request.getParameter("username");
+            String password = request.getParameter("password");
+
+            // Check if the email contains the "@" symbol
+            if (!email.contains("@")) {
+    %>
+                <script>
+                    alert("Invalid email format");
+                </script>
+    <%
+            } else {
+                // Perform your registration logic here
+
+    %>
+                <script>
+                    // Display the registration message
+                    document.getElementById("registration-message").style.display = "block";
+
+                    // Hide the registration form after successful registration
+                    document.getElementById("registration-form").style.display = "none";
+                </script>
+    <%
+            }
+        }
+    %>
+
+</body>
+</html>

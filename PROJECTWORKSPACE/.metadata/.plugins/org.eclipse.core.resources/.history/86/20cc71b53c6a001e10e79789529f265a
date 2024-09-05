@@ -1,0 +1,8 @@
+package com.klef.jfsd.project.service;
+
+import com.klef.jfsd.project.model.Student;
+
+public interface FacultyService
+{
+	 public Student checkstudentlogin(String uname, String pwd);
+}

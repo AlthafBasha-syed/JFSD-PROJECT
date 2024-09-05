@@ -1,0 +1,11 @@
+package com.klef.jfsd.project.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.klef.jfsd.project.model.Faculty;
+
+
+public interface FacultyRepository extends JpaRepository<Faculty, Integer>
+{
+
+}

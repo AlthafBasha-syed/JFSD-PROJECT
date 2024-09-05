@@ -1,0 +1,10 @@
+package com.klef.jfsd.project.model;
+
+import jakarta.persistence.Entity;
+
+@Entity
+
+public class Admin 
+{
+
+}
